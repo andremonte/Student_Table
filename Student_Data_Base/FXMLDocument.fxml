@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="476.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jac444.wk5.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="101.0" layoutY="14.0" minHeight="16" minWidth="69" text=".:Student Application:." textAlignment="CENTER">
+            <font>
+                <Font name="Arial Bold" size="22.0" />
+            </font>
+        </Label>
+        <Label fx:id="nome" layoutX="16.0" layoutY="73.0" text="Name:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nameField" editable="false" layoutX="76.0" layoutY="68.0" />
+        <Label fx:id="curso" layoutX="11.0" layoutY="114.0" text="Course:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="courseField" editable="false" layoutX="76.0" layoutY="110.0" />
+        <Label fx:id="nota" layoutX="16.0" layoutY="156.0" text="Grade:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="gradeField" editable="false" layoutX="76.0" layoutY="152.0" />
+        <Label fx:id="carregar" layoutX="9.0" layoutY="199.0" text="FileName:" />
+        <TextField fx:id="fileField" editable="true" layoutX="76.0" layoutY="194.0" />
+        <Button fx:id="editBut" disable="true" layoutX="340.0" layoutY="110.0" mnemonicParsing="false" onAction="#editStudent" text="Edit" />
+        <Button fx:id="newBut" layoutX="338.0" layoutY="68.0" mnemonicParsing="false" onAction="#newStudent" text="New" />
+        <Button fx:id="saveBut" disable="true" layoutX="337.0" layoutY="152.0" mnemonicParsing="false" onAction="#saveStudent" text="Save" />
+        <Button fx:id="loadBut" layoutX="194.0" layoutY="227.0" mnemonicParsing="false" onAction="#loadFile" text="Load" />
+        <Button fx:id="deleteBut" disable="true" layoutX="332.0" layoutY="194.0" onAction="#deleteStudent" text="Delete" />
+        
+        <TableView fx:id="tableView" layoutX="27.0" layoutY="262.0" onMouseClicked="#handleRowSelect" prefHeight="200.0" prefWidth="515.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="49.0" text="Id" />
+                <TableColumn fx:id="nameColumn" prefWidth="216.0" text="Name" />
+                <TableColumn fx:id="courseColumn" prefWidth="144.0" text="Course" />
+                <TableColumn fx:id="gradeColumn" prefWidth="98.0" text="Grade" />
+            </columns>
+        </TableView>
+      <Button layoutX="76.0" layoutY="227.0" mnemonicParsing="false" onAction="#FileChooser" prefHeight="27.0" prefWidth="90.0" text="Choose File" />
+    </children>
+    <effect>
+        <Lighting>
+            <bumpInput>
+                <Shadow />
+            </bumpInput>
+            <light>
+                
+            </light>
+        </Lighting>
+    </effect>
+</AnchorPane>
